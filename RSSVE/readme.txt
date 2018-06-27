@@ -41,7 +41,6 @@ Credits:
 
     Programming:
 
-    • CubeTheSphere by Realm Of Concepts
     • Environmental Visual Enhancements (EVE) by rbray89 & WazWaz
     • Module Manager by ialdabaoth and sarbian
     • Real Solar System (RSS) by NathanKell
@@ -50,6 +49,7 @@ Credits:
 
 Contributors:
 
+    • Damien
     • Francois W. Nel
     • Lukas "Theysen" Theisen
 

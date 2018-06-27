@@ -1,4 +1,32 @@
 ==================================================
+RSSVE v1.3.1-5 for KSP 1.3.1 (2018-06-27)
+==================================================
+
+Change Log:
+
+    • Added an optional 32K high resolution cloud pack for Earth.
+    • Added two new cloud layers to Uranus.
+    • Added cloud details to Jupiter, Saturn, Uranus and Neptune.
+    • Added a better texture for the volumetric cloud particles.
+    • Converted all main EVE textures into cubemaps.
+    • Updated the file and folder structure.
+    • Reverted the city lights detail textures to the RC4 ones.
+    • Minimized the hard transitioning between PQS and ScaledSpace (courtesy of RSSVE collaborator Damien).
+
+Bug Fixes:
+
+    • Fixed the Earth surface appearing overexposed.
+    • Fixed the color of the Mars atmosphere and tweaked it's brightness.
+    • Fixed the incorrect assembly version.
+    • Fixed the detail appearance distances of many cloud layers.
+
+Known Issues:
+
+    • The city lights may appear blocky from low orbital altitudes.
+    • The cloud texture maps may break upon quickloading a save while in-flight.
+    • The Saturn rings may sometimes appear to cast hard shadows or be completely black.
+
+==================================================
 RSSVE v1.3.1-4 for KSP 1.3.1 (2018-04-11)
 ==================================================
 

@@ -16,23 +16,23 @@ Check the **![RSSVE wiki][RSSVE:wiki-link]** about the requirements and the inst
 ### Textures:
 
   * Cloud and city detail textures by **[Real Visual Enhancements (RVE)][RSSVE:RVE-link]**
-  * Earth cloud and city light main textures by **[NASA Visible Earth][RSSVE:NASA-VE-link]**
-  * Jupiter texture map (used for exporting some basic cloud textures) by **Vleider** (redistributed by **[The Celestia Motherlode][RSSVE:TCM-link]**)
-  * Saturn texture map (used for exporting some basic cloud textures) by **Runar Thorvaldsen**, **Dr. Fridger Schremmp** and **Grant Hutchinson** (redistributed by **[The Celestia Motherlode][RSSVE:TCM-link]**)
+  * Earth cloud and city lights textures by **[NASA Visible Earth][RSSVE:NASA-VE-link]**
+  * Jupiter texture (used for exporting some basic cloud textures) by **Vleider** (redistributed by **[The Celestia Motherlode][RSSVE:TCM-link]**)
+  * Saturn texture (used for exporting some basic cloud textures) by **Runar Thorvaldsen**, **Dr. Fridger Schremmp** and **Grant Hutchinson** (redistributed by **[The Celestia Motherlode][RSSVE:TCM-link]**)
   * Saturn ring texture by **[CICLOPS][RSSVE:CICLOPS-link]** (Cassini Imaging Central Laboratory For Operations - image preparation by **Daren Wilson** and **Carolyn Porco**)
-  * Uranus and Neptune texture maps (used for exporting some basic cloud textures) by **[JHT's Planetary Pixel Emporium][RSSVE:PPE-link]**
+  * Uranus and Neptune textures (used for exporting some basic cloud textures) by **[JHT's Planetary Pixel Emporium][RSSVE:PPE-link]**
 
 ### Programming:
 
-  * **CubeTheSphere** utility by **[Unreal Realm Of Concepts][RSSVE:CubeTheSphere-link]**
-  * **Module Manager** by **[ialdabaoth][RSSVE:MM-link-ialdabaoth]** and **[sarbian][RSSVE:MM-link-sarbian]**
   * **Environmental Visual Enhancements (EVE)** by **[rbray89][RSSVE:EVE-link-rbray]** and **[WazWaz][RSSVE:EVE-link-waz]**
+  * **Module Manager** by **[ialdabaoth][RSSVE:MM-link-ialdabaoth]** and **[sarbian][RSSVE:MM-link-sarbian]**
   * **Real Solar System (RSS)** by **[NathanKell][RSSVE:RSS-link]**
   * **Real Visual Enhancements (RVE)** by **[Pingopete][RSSVE:RVE-link]**
   * **Scatterer** by **[Blackrack][RSSVE:Scatterer-link]**
 
 ## Contributors
 
+  * **Damien**
   * **[Francois W. Nel][RSSVE:contributor-francois]**
   * **[Lukas "Theysen" Theisen][RSSVE:contributor-theysen]**
 
@@ -72,7 +72,6 @@ You should have received a copy of the license along with this work. If not, vis
 [RSSVE:CICLOPS-link]:         http://www.ciclops.org
 [RSSVE:contributor-francois]: https://github.com/francoiswnel
 [RSSVE:contributor-theysen]:  https://github.com/Theysen
-[RSSVE:CubeTheSphere-link]:   http://realmofconcepts.com/unreal/CubeTheSphere.html
 [RSSVE:EVE-link-rbray]:       https://github.com/rbray89
 [RSSVE:EVE-link-waz]:         https://github.com/WazWaz
 [RSSVE:MM-link-ialdabaoth]:   https://github.com/Ialdabaoth
@@ -84,7 +83,7 @@ You should have received a copy of the license along with this work. If not, vis
 [RSSVE:Scatterer-link]:       https://github.com/LGhassen
 [RSSVE:shield-license]:       https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-green.svg
 [RSSVE:shield-version]:       https://img.shields.io/badge/KSP%20Version-1.3.1.1891-red.svg
-[RSSVE:TCM-link]:             http://www.celestiamotherlode.net    
+[RSSVE:TCM-link]:             http://www.celestiamotherlode.net
 [RSSVE:wiki-link]:            https://github.com/PhineasFreak/RSSVE/wiki
 
 [RSSVE:Banner]:  https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_banner.png
