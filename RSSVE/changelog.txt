@@ -4,7 +4,7 @@ RSSVE v1.3.1-5 for KSP 1.3.1 (2018-06-27)
 
 Change Log:
 
-    • Added an optional 32K high resolution cloud pack for Earth.
+    • Added an optional 32K high resolution (HR) cloud pack for Earth.
     • Added two new cloud layers to Uranus.
     • Added cloud details to Jupiter, Saturn, Uranus and Neptune.
     • Added a better texture for the volumetric cloud particles.
