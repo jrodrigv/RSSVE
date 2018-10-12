@@ -42,7 +42,7 @@ namespace RSSVE
                 Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly version: {0}", Version.GetAssemblyVersion ()));
                 Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly compatible: {0}", CompatibilityChecker.IsCompatible ()));
 
-                //  The following information fields are only active if the 
+                //  The following information fields are only active if the
                 //  "Verbose Logging" option in the KSP settings is enabled.
 
                 if (Utilities.IsVerboseDebugEnabled)

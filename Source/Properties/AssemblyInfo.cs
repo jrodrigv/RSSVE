@@ -43,7 +43,7 @@ using System.Runtime.InteropServices;
 //    • Revision
 
 [assembly: AssemblyVersion ("1.3.1.1891")]
-[assembly: AssemblyFileVersion ("1.3.1.5")]
+[assembly: AssemblyFileVersion ("1.3.1.6")]
 [assembly: AssemblyInformationalVersion ("1.3.1.1891")]
 
 //  The KSPAssembly attribute can be used to ensure that the plugin assemblies

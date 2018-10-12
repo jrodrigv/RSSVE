@@ -108,6 +108,73 @@
             Does not return a value.
             </returns>
         </member>
+        <member name="T:RSSVE.RSSVESettings">
+            <summary>
+            Configuration options management class. Operates only in the Difficulty Settings page.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.szConfigNodeName">
+            <summary>
+            The name of the ConfigNode where all settings are stored.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableCityLights">
+            <summary>
+            Parameter to set whether the EVE city lights should be visible.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableTerrainTextures">
+            <summary>
+            Parameter to set whether the Kopernicus terrain textures should be visible.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableVolumetricClouds">
+            <summary>
+            Parameter to set whether the EVE volumetric clouds should be visible.
+            </summary>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnLoad(ConfigNode)">
+            <summary>
+            Method to load the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be loaded.</param>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnSave(ConfigNode)">
+            <summary>
+            Method to save the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be saved.</param>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.DisplaySection">
+            <summary>
+            Method to set the localized title of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.GameMode">
+            <summary>
+            Method to set the applicable GameModes for the mod Difficulty Options.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.HasPresets">
+            <summary>
+            Method to set the presets of the mod Difficulty Options.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.Section">
+            <summary>
+            Method to set the internal section name of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.SectionOrder">
+            <summary>
+            Method to set the position of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.Title">
+            <summary>
+            Method to set the title of the Difficulty Options entry.
+            </summary>
+        </member>
         <member name="T:RSSVE.Constants">
             <summary>
             Class to set up the parameters required and used by RSSVE.
@@ -128,7 +195,17 @@
         </member>
         <member name="F:RSSVE.Constants.AssemblyPath">
             <summary>
-            The (relative to the "GameData" folder) path where the assembly resides.
+            The (relative to the "GameData" directory) path where the assembly file resides.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.ConfigurationFileName">
+            <summary>
+            The name of the configuration file.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.ConfigurationFilePath">
+            <summary>
+            The (relative to the "GameData" directory) path where the configuration file resides.
             </summary>
         </member>
         <member name="T:RSSVE.Constants.VersionCompatible">

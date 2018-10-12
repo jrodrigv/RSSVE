@@ -167,7 +167,7 @@ namespace RSSVE
 
                     if (CompatibilityChecker.IsCompatible ())
                     {
-                        Notification.Logger (Constants.AssemblyName, null, "Starting the EVE config validator...");
+                        Notification.Logger (Constants.AssemblyName, null, "Starting the EVE config validation...");
 
                         EVEConfigChecker.GetValidateConfig (Utilities.GetCelestialBodyList ());
 

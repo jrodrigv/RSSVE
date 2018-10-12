@@ -78,10 +78,22 @@ namespace RSSVE
         public static readonly string AssemblyName = "RSSVE";
 
         /// <summary>
-        /// The (relative to the "GameData" folder) path where the assembly resides.
+        /// The (relative to the "GameData" directory) path where the assembly file resides.
         /// </summary>
 
         public static readonly string AssemblyPath = AssemblyName + Path.AltDirectorySeparatorChar + "Plugins";
+
+        /// <summary>
+        /// The name of the configuration file.
+        /// </summary>
+
+        public static readonly string ConfigurationFileName = "RSSVE_Settings_Config.cfg";
+
+        /// <summary>
+        /// The (relative to the "GameData" directory) path where the configuration file resides.
+        /// </summary>
+
+        public static readonly string ConfigurationFilePath = "GameData" + Path.AltDirectorySeparatorChar + AssemblyName + Path.AltDirectorySeparatorChar + "Configs" + Path.AltDirectorySeparatorChar + "Misc_Configs";
     }
 
     #endregion
