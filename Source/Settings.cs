@@ -53,6 +53,13 @@ namespace RSSVE
         public bool EnableVolumetricClouds = true;
 
         /// <summary>
+        /// Display a notification to the user that a restart is required after changing any of the parameters.
+        /// </summary>
+
+        [GameParameters.CustomStringParameterUI ("Restart Notification", title = null, lines = 4)]
+        public string szRestartNotification = "\n\nA restart is required for the changes to take effect.";
+
+        /// <summary>
         /// Method to set the localized title of the Difficulty Options entry.
         /// </summary>
 
@@ -222,7 +229,7 @@ namespace RSSVE
         {
             get
             {
-                return "RSS Visual Enhancements";
+                return "Global Settings";
             }
         }
     }
