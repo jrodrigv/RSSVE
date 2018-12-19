@@ -1,6 +1,14 @@
-==================================================
-Real Solar System Visual Enhancements (RSSVE)
-==================================================
+====================================================================================================
+       ________      ______       ______   ___        ___   _________
+      /   __   \    /  __  \     /  __  \  \  \      /  /  |   ______|
+     /   /  |  |   /  /  |_|    /  /  |_|   \  \    /  /   |  |
+    /   /__/  /    |  |__       |  |__       \  \  /  /    |  |______
+   /   __    /     \___  \      \___  \       \  \/  /     |   ______|
+  /   /  \   \    ___  \  |    ___  \  |       \    /      |  |
+ /   /    \   \   \  \_/  /    \  \_/  /        \  /       |  |______
+/___/      \___\   \_____/      \_____/          \/        |_________|
+
+====================================================================================================
 
 Real Solar System Visual Enhancements (RSSVE) is an add-on for the Environmental Visual Enhancements (EVE), providing clouds and other visual improvements for the Real Solar System (RSS) modification.
 
@@ -32,16 +40,19 @@ Credits:
 
     Textures:
 
-    • Cloud and city detail textures by Real Visual Enhancements (RVE)
-    • Earth cloud and city light main textures by NASA Visible Earth
-    • Jupiter texture map (used for exporting some basic cloud textures) by Vleider (redistributed by The Celestia Motherlode)
+    • Cloud and Earth city detail textures by Real Visual Enhancements (RVE)
+    • Venus cloud texture map by Snowfall-The-Cat
+    • Earth low resolution cloud texture map by NASA Visible Earth
+    • Earth high resolution cloud texture map by NASA Visible Earth (image preparation by Harald Schmidt - redistributed by The Celestia Motherlode)
+    • Earth city lights texture map by NASA Earth Observatory
+    • Jupiter texture map (used for exporting some basic cloud textures) by Björn Jónsson
     • Saturn texture map (used for exporting some basic cloud textures) by Runar Thorvaldsen, Dr. Fridger Schremmp and Grant Hutchinson (redistributed by The Celestia Motherlode)
     • Saturn ring texture by CICLOPS (Cassini Imaging Central Laboratory For Operations - image preparation by Daren Wilson and Carolyn Porco)
     • Uranus and Neptune texture maps (used for exporting some basic cloud textures) by JHT's Planetary Pixel Emporium
 
     Programming:
 
-    • Environmental Visual Enhancements (EVE) by rbray89 & WazWaz
+    • Environmental Visual Enhancements (EVE) by rbray89 and WazWaz
     • Module Manager by ialdabaoth and sarbian
     • Real Solar System (RSS) by NathanKell
     • Real Visual Enhancements (RVE) by Pingopete
