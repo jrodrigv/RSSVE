@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -84,37 +84,48 @@ namespace RSSVE
 
         void Start ()
         {
-            // Before we start, check if the KSP version is compatible.
-
-            if (CompatibilityChecker.IsCompatible ())
+            try
             {
-                // Get all available camera transforms.
+                // Before we start, check if the KSP version is compatible.
 
-                Camera [] CameraList = Camera.allCameras;
-
-                Notification.Logger (Constants.AssemblyName, null, "Getting all available camera transforms...");
-
-                // Iterate until the SS camera transform is found.
-
-                for (int iCameraCount = 0; iCameraCount < CameraList.Length; iCameraCount++)
+                if (CompatibilityChecker.IsCompatible ())
                 {
-                    if (CameraList [iCameraCount].name.Equals ("Camera ScaledSpace"))
+                    // Get all available camera transforms.
+
+                    Camera [] CameraList = Camera.allCameras;
+
+                    Notification.Logger (Constants.AssemblyName, null, "Getting all available camera transforms...");
+
+                    // Iterate until the SS camera transform is found.
+
+                    for (int iCameraCount = 0; iCameraCount < CameraList.Length; iCameraCount++)
                     {
-                        SSCamera = CameraList [iCameraCount];
+                        if (CameraList [iCameraCount].name.Equals ("Camera ScaledSpace"))
+                        {
+                            SSCamera = CameraList [iCameraCount];
 
-                        Notification.Logger (Constants.AssemblyName, null, "Found the ScaledSpace camera transform!");
+                            Notification.Logger (Constants.AssemblyName, null, "Found the ScaledSpace camera transform!");
 
-                        // Get the default SS camera near clip value. This ensures that even
-                        // when the value is changed later, a fallback one will exist.
+                            // Get the default SS camera near clip value. This ensures that even
+                            // when the value is changed later, a fallback one will exist.
 
-                        // This also ensures that custom near clip values (as set from
-                        // other sources) will be maintained for every other view.
+                            // This also ensures that custom near clip values (as set from
+                            // other sources) will be maintained for every other view.
 
-                        fDefaultNearClip = SSCamera.nearClipPlane;
+                            fDefaultNearClip = SSCamera.nearClipPlane;
 
-                        Notification.Logger (Constants.AssemblyName, null, string.Format ("Default ScaledSpace camera near clip value: {0}", fDefaultNearClip));
+                            Notification.Logger (Constants.AssemblyName, null, string.Format ("Default ScaledSpace camera near clip value: {0}", fDefaultNearClip));
+                        }
                     }
                 }
+            }
+            catch (Exception ExceptionStack)
+            {
+                Notification.Logger (Constants.AssemblyName, "Error", string.Format ("CameraUpdater.Start() caught an exception: {0},\n{1}\n", ExceptionStack.Message, ExceptionStack.StackTrace));
+            }
+            finally
+            {
+                Destroy (this);
             }
         }
 

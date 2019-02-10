@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -41,35 +41,53 @@ namespace RSSVE
         public struct VersionCompatible
         {
             /// <summary>
-            /// The major version value.
+            /// The minimum major version value.
             /// </summary>
 
-            public static readonly int Major = 1;
+            public static readonly int MajorMin = 1;
 
             /// <summary>
-            /// The minor version value.
+            /// The maximum major version value.
             /// </summary>
 
-            public static readonly int Minor = 3;
+            public static readonly int MajorMax = 1;
 
             /// <summary>
-            /// The revision version value.
+            /// The minimum minor version value.
             /// </summary>
 
-            public static readonly int Revision = 1;
+            public static readonly int MinorMin = 4;
+
+            /// <summary>
+            /// The maximum minor version value.
+            /// </summary>
+
+            public static readonly int MinorMax = 6;
+
+            /// <summary>
+            /// The minimum revision version value.
+            /// </summary>
+
+            public static readonly int RevisionMin = 0;
+
+            /// <summary>
+            /// The maximum revision version value.
+            /// </summary>
+
+            public static readonly int RevisionMax = 9;
 
             /// <summary>
             /// The build version value.
             /// </summary>
 
-            public static readonly int Build = 1891;
+            public static readonly int Build = 2401;
         }
 
         /// <summary>
         /// The compatible Unity version.
         /// </summary>
 
-        public static readonly string UnityVersion = "5.4.0p4";
+        public static readonly string UnityVersion = "2017.1.3p1";
 
         /// <summary>
         /// The name of the assembly (used as a tag for the notification dialogs and the log file).
@@ -179,6 +197,21 @@ namespace RSSVE
     public static class Utilities
     {
         /// <summary>
+        /// Method to check whether a value is inside the specified range.
+        /// </summary>
+        /// <param name = "nNumber">The value to check (integer).</param>
+        /// <param name = "nMin">The lower value range (integer).</param>
+        /// <param name = "nMax">The upper value range (integer).</param>
+        /// <returns>
+        /// Returns the status of the check (boolean).
+        /// </returns>
+
+        public static bool InRange (int nNumber, int nMin, int nMax)
+        {
+            return ((nNumber >= nMin) && (nNumber <= nMax));
+        }
+
+        /// <summary>
         /// Method to get the available celestial body names.
         /// </summary>
         /// <returns>
@@ -282,21 +315,6 @@ namespace RSSVE
                 }
 
                 return PlatformTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Method to get the operating system octet size.
-        /// </summary>
-        /// <returns>
-        /// Returns True if the Operating System is using the AMD64 specification (x64) and False if it is using the baseline Intel specification (x86).
-        /// </returns>
-
-        public static bool Is64BitOS
-        {
-            get
-            {
-                return (IntPtr.Size.Equals (8));
             }
         }
 

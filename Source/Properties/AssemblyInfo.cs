@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 
 //  This file is part of Real Solar System Visual Enhancements.
 
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany ("Phineas Freak")]
 [assembly: AssemblyConfiguration ("Stable")]
-[assembly: AssemblyCopyright ("Copyright © 2016 - 2018, Phineas Freak")]
+[assembly: AssemblyCopyright ("Copyright © 2016 - 2019, Phineas Freak")]
 [assembly: AssemblyDescription ("Real Solar System Visual Enhancements for KSP")]
 [assembly: AssemblyProduct ("RSSVE")]
 [assembly: AssemblyTitle ("RSSVE")]
@@ -42,9 +42,9 @@ using System.Runtime.InteropServices;
 //    • Build Number
 //    • Revision
 
-[assembly: AssemblyVersion ("1.3.1.1891")]
-[assembly: AssemblyFileVersion ("1.3.1.6")]
-[assembly: AssemblyInformationalVersion ("1.3.1.1891")]
+[assembly: AssemblyVersion ("1.6.1.2401")]
+[assembly: AssemblyFileVersion ("1.6.1.1")]
+[assembly: AssemblyInformationalVersion ("1.6.1.2401")]
 
 //  The KSPAssembly attribute can be used to ensure that the plugin assemblies
 //  are loaded in the correct order.

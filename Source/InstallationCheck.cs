@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -44,9 +44,8 @@ namespace RSSVE
 
     class InstallChecker : MonoBehaviour
     {
-
         /// <summary>
-        /// Method to destroy any active gameobjects.
+        /// Method to destroy any active GameObjects.
         /// </summary>
         /// <returns>
         /// Does not return a value.
@@ -67,10 +66,14 @@ namespace RSSVE
             {
                 Notification.Logger (Constants.AssemblyName, "Error", string.Format ("InstallChecker.OnDestroy() caught an exception: {0},\n{1}\n", ExceptionStack.Message, ExceptionStack.StackTrace));
             }
+            finally
+            {
+                Destroy (this);
+            }
         }
 
         /// <summary>
-        /// Method to register the EVE configuration file validator when a GameDatabase reload is invoked.
+        /// Method to register the EVE configuration file validation routine when a GameDatabase reload is invoked.
         /// </summary>
         /// <returns>
         /// Does not return a value.
@@ -163,7 +166,7 @@ namespace RSSVE
                         Notification.Logger (Constants.AssemblyName, "Error", "Required dependencies missing!");
                     }
 
-                    //  Validate all possible EVE configs loaded in the GameDatabase.
+                    //  Validate all possible EVE configuration files loaded in the GameDatabase.
 
                     if (CompatibilityChecker.IsCompatible ())
                     {
@@ -180,6 +183,10 @@ namespace RSSVE
             catch (Exception ExceptionStack)
             {
                 Notification.Logger (Constants.AssemblyName, "Error", string.Format ("InstallChecker.Start() caught an exception: {0},\n{1}\n", ExceptionStack.Message, ExceptionStack.StackTrace));
+            }
+            finally
+            {
+                Destroy (this);
             }
         }
     }

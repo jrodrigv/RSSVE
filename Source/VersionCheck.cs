@@ -1,6 +1,6 @@
 //  ================================================================================
 /*
- * Copyright © 2014-2018, Majiir, ferram4.
+ * Copyright © 2014-2019, Majiir, ferram4.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -56,9 +56,9 @@ namespace RSSVE
             //  Even if you don't lock down functionality, you should return true if your users
             //  can expect a future update to be available.
 
-            return (Versioning.version_minor.Equals (Constants.VersionCompatible.Minor) &&
-                    Versioning.version_major.Equals (Constants.VersionCompatible.Major) &&
-                    Versioning.Revision.Equals (Constants.VersionCompatible.Revision));
+            return Utilities.InRange (Versioning.version_minor, Constants.VersionCompatible.MinorMin, Constants.VersionCompatible.MinorMax) &&
+                   Utilities.InRange (Versioning.version_major, Constants.VersionCompatible.MajorMin, Constants.VersionCompatible.MajorMax) &&
+                   Utilities.InRange (Versioning.Revision, Constants.VersionCompatible.RevisionMin, Constants.VersionCompatible.RevisionMax);
         }
 
         public static bool IsUnityCompatible ()

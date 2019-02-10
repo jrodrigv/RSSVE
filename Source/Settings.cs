@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -39,7 +39,7 @@ namespace RSSVE
         public bool EnableCityLights = true;
 
         /// <summary>
-        /// Parameter to set whether the Kopernicus terrain textures should be visible.
+        /// Parameter to set whether the Kopernicus PQS terrain textures should be visible.
         /// </summary>
 
         [GameParameters.CustomParameterUI ("Enable Terrain Textures")]
@@ -149,7 +149,7 @@ namespace RSSVE
         {
             try
             {
-                // Create a new config node object.
+                // Create a new ConfigNode object.
 
                 var RSSVEConfigNode = new ConfigNode ();
 

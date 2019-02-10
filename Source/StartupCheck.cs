@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2018, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -38,30 +38,19 @@ namespace RSSVE
             {
                 //  Log some basic information that might be of interest when debugging installations.
 
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly location: {0}", Assembly.GetExecutingAssembly ().Location));
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly version: {0}", Version.GetAssemblyVersion ()));
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly compatible: {0}", CompatibilityChecker.IsCompatible ()));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly location: {0}", Assembly.GetExecutingAssembly().Location));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly version: {0}", Version.GetAssemblyVersion()));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly compatible: {0}", CompatibilityChecker.IsCompatible()));
 
                 //  The following information fields are only active if the
                 //  "Verbose Logging" option in the KSP settings is enabled.
 
                 if (Utilities.IsVerboseDebugEnabled)
                 {
-                    Notification.Logger (Constants.AssemblyName, null, string.Format ("Using x86-64 KSP binaries: {0}", Utilities.Is64BitOS));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using Unity player: {0}", Utilities.GetPlatformType));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using renderer: {0}", Utilities.GetGraphicsRenderer));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using Maximum Texture Size: {0}", SystemInfo.maxTextureSize));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Supports cubemap textures: {0}", SystemInfo.supportsRenderToCubemap));
-                }
-
-                //  Check if we are running under a x86 environment. The large amount of RAM space
-                //  required by the RSSVE assets does not allow the use of the 32 bit binaries.
-
-                if (!Utilities.Is64BitOS)
-                {
-                    Notification.Dialog ("OSChecker", "Unsupported OS Version", "#F0F0F0", string.Format ("{0} is not supported by 32 bit KSP installations.\n\nPlease use the 64 bit instance of KSP.", Constants.AssemblyName), "#F0F0F0");
-
-                    Notification.Logger (Constants.AssemblyName, "Error", "Unsupported OS Version (using 32 bit)!");
                 }
 
                 //  Check if the graphics accelerator installed supports at
@@ -77,6 +66,10 @@ namespace RSSVE
             catch (Exception ExceptionStack)
             {
                 Notification.Logger (Constants.AssemblyName, "Error", string.Format ("StartupChecker.Start() caught an exception: {0},\n{1}\n", ExceptionStack.Message, ExceptionStack.StackTrace));
+            }
+            finally
+            {
+                Destroy (this);
             }
         }
     }
