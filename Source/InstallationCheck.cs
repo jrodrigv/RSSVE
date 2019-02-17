@@ -117,15 +117,14 @@ namespace RSSVE
                     string MissingDependenciesNames = string.Empty;
 
                     //  Check if the following dependencies are installed:
+                    //
                     //  • Environmental Visual Enhancements
                     //  • Module Manager
                     //  • Real Solar System
-                    //  • Scatterer
 
-                    bool AssemblyEVELoaded       = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("EVEManager",      StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals ("environmentalvisualenhancements" + Path.AltDirectorySeparatorChar + "plugins"));
-                    bool AssemblyMMLoaded        = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("ModuleManager",   StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (string.Empty));
-                    bool AssemblyRSSLoaded       = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("RealSolarSystem", StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals ("realsolarsystem" + Path.AltDirectorySeparatorChar + "plugins"));
-                    bool AssemblyScattererLoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("Scatterer",       StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals ("scatterer"));
+                    bool AssemblyEVELoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("EVEManager",      StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyEVEPath));
+                    bool AssemblyMMLoaded  = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("ModuleManager",   StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyMMPath));
+                    bool AssemblyRSSLoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("RealSolarSystem", StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyRSSPath));
 
                     //  If a dependency is not installed then we add it in the missing dependencies list.
 
@@ -148,13 +147,6 @@ namespace RSSVE
                         MissingDependenciesNames = string.Concat (MissingDependenciesNames, "  •  Real Solar System\n");
 
                         Notification.Logger (Constants.AssemblyName, "Error", "Missing or incorrectly installed Real Solar System!");
-                    }
-
-                    if (!AssemblyScattererLoaded)
-                    {
-                        MissingDependenciesNames = string.Concat (MissingDependenciesNames, "  •  Scatterer\n");
-
-                        Notification.Logger (Constants.AssemblyName, "Error", "Missing or incorrectly installed Scatterer!");
                     }
 
                     //  Warn the user if any of the dependencies are missing.

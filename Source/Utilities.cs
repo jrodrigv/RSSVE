@@ -102,6 +102,24 @@ namespace RSSVE
         public static readonly string AssemblyPath = AssemblyName + Path.AltDirectorySeparatorChar + "Plugins";
 
         /// <summary>
+        /// The (relative to the "GameData" directory) path where the Environmental Visual Enhancements mod resides.
+        /// </summary>
+
+        public static readonly string AssemblyEVEPath = "environmentalvisualenhancements" + Path.AltDirectorySeparatorChar + "plugins";
+
+        /// <summary>
+        /// The (relative to the "GameData" directory) path where the Module Manager mod resides.
+        /// </summary>
+
+        public static readonly string AssemblyMMPath = string.Empty;
+
+        /// <summary>
+        /// The (relative to the "GameData" directory) path where the Real Solar System mod resides.
+        /// </summary>
+
+        public static readonly string AssemblyRSSPath = "realsolarsystem" + Path.AltDirectorySeparatorChar + "plugins";
+
+        /// <summary>
         /// The name of the configuration file.
         /// </summary>
 
@@ -112,6 +130,7 @@ namespace RSSVE
         /// </summary>
 
         public static readonly string ConfigurationFilePath = "GameData" + Path.AltDirectorySeparatorChar + AssemblyName + Path.AltDirectorySeparatorChar + "Configs" + Path.AltDirectorySeparatorChar + "Misc_Configs";
+
     }
 
     #endregion
@@ -224,7 +243,7 @@ namespace RSSVE
 
             foreach (var Celestial in FlightGlobals.Bodies)
             {
-                //  Add the body name to the list. We are saving it to
+                //  Add the body name to the list. We are saving them to
                 //  lowercase, since it is the lowest common denominator.
 
                 if (Celestial != null)

@@ -204,16 +204,6 @@ namespace RSSVE
                             }
                         }
                     }
-
-                    // Log some debugging information. NOTE: major log spam source!
-
-                    if (Utilities.IsVerboseDebugEnabled)
-                    {
-                        Notification.Logger (Constants.AssemblyName, null, string.Format ("Target body name: {0}", szTargetBodyName));
-                        Notification.Logger (Constants.AssemblyName, null, string.Format ("Target body transform: {0}", TargetBodyTransform));
-                        Notification.Logger (Constants.AssemblyName, null, string.Format ("Target body radius: {0}", fTargetBodyRadius));
-                        Notification.Logger (Constants.AssemblyName, null, string.Format ("SS camera near clip: {0}", SSCamera.nearClipPlane));
-                    }
                 }
             }
             catch (Exception ExceptionStack)

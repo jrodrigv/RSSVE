@@ -86,7 +86,7 @@
         </member>
         <member name="M:RSSVE.InstallChecker.OnDestroy">
             <summary>
-            Method to destroy any active gameobjects.
+            Method to destroy any active GameObjects.
             </summary>
             <returns>
             Does not return a value.
@@ -94,7 +94,7 @@
         </member>
         <member name="M:RSSVE.InstallChecker.OnGameDatabaseLoaded">
             <summary>
-            Method to register the EVE configuration file validator when a GameDatabase reload is invoked.
+            Method to register the EVE configuration file validation routine when a GameDatabase reload is invoked.
             </summary>
             <returns>
             Does not return a value.
@@ -107,6 +107,88 @@
             <returns>
             Does not return a value.
             </returns>
+        </member>
+        <member name="T:RSSVE.RSSVESettings">
+            <summary>
+            Configuration options management class. Operates only in the Difficulty Settings page.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.szConfigNodeName">
+            <summary>
+            The name of the ConfigNode where all settings are stored.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableCityLights">
+            <summary>
+            Parameter to set whether the EVE city lights should be visible.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableTerrainTextures">
+            <summary>
+            Parameter to set whether the Kopernicus PQS terrain textures should be visible.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.EnableVolumetricClouds">
+            <summary>
+            Parameter to set whether the EVE volumetric clouds should be visible.
+            </summary>
+        </member>
+        <member name="F:RSSVE.RSSVESettings.szRestartNotification">
+            <summary>
+            Display a notification to the user that a restart is required after changing any of the parameters.
+            </summary>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnLoad(ConfigNode)">
+            <summary>
+            Method to load the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be loaded.</param>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnSave(ConfigNode)">
+            <summary>
+            Method to save the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be saved.</param>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.DisplaySection">
+            <summary>
+            Method to set the localized title of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.GameMode">
+            <summary>
+            Method to set the applicable GameModes for the mod Difficulty Options.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.HasPresets">
+            <summary>
+            Method to set the presets of the mod Difficulty Options.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.Section">
+            <summary>
+            Method to set the internal section name of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.SectionOrder">
+            <summary>
+            Method to set the position of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="P:RSSVE.RSSVESettings.Title">
+            <summary>
+            Method to set the title of the Difficulty Options entry.
+            </summary>
+        </member>
+        <member name="T:RSSVE.StartupChecker">
+            <summary>
+            Startup system checker. Operates only in the Loading scene.
+            </summary>
+        </member>
+        <member name="M:RSSVE.StartupChecker.Start">
+            <summary>
+            Method to start the startup checker.
+            </summary>
         </member>
         <member name="T:RSSVE.Constants">
             <summary>
@@ -128,7 +210,32 @@
         </member>
         <member name="F:RSSVE.Constants.AssemblyPath">
             <summary>
-            The (relative to the "GameData" folder) path where the assembly resides.
+            The (relative to the "GameData" directory) path where the assembly file resides.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.AssemblyEVEPath">
+            <summary>
+            The (relative to the "GameData" directory) path where the Environmental Visual Enhancements mod resides.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.AssemblyMMPath">
+            <summary>
+            The (relative to the "GameData" directory) path where the Module Manager mod resides.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.AssemblyRSSPath">
+            <summary>
+            The (relative to the "GameData" directory) path where the Real Solar System mod resides.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.ConfigurationFileName">
+            <summary>
+            The name of the configuration file.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.ConfigurationFilePath">
+            <summary>
+            The (relative to the "GameData" directory) path where the configuration file resides.
             </summary>
         </member>
         <member name="T:RSSVE.Constants.VersionCompatible">
@@ -136,19 +243,34 @@
             Version check structure.
             </summary>
         </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.Major">
+        <member name="F:RSSVE.Constants.VersionCompatible.MajorMin">
             <summary>
-            The major version value.
+            The minimum major version value.
             </summary>
         </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.Minor">
+        <member name="F:RSSVE.Constants.VersionCompatible.MajorMax">
             <summary>
-            The minor version value.
+            The maximum major version value.
             </summary>
         </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.Revision">
+        <member name="F:RSSVE.Constants.VersionCompatible.MinorMin">
             <summary>
-            The revision version value.
+            The minimum minor version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.MinorMax">
+            <summary>
+            The maximum minor version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMin">
+            <summary>
+            The minimum revision version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMax">
+            <summary>
+            The maximum revision version value.
             </summary>
         </member>
         <member name="F:RSSVE.Constants.VersionCompatible.Build">
@@ -190,6 +312,17 @@
             Class to setup basic system and utility functions.
             </summary>
         </member>
+        <member name="M:RSSVE.Utilities.InRange(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method to check whether a value is inside the specified range.
+            </summary>
+            <param name = "nNumber">The value to check (integer).</param>
+            <param name = "nMin">The lower value range (integer).</param>
+            <param name = "nMax">The upper value range (integer).</param>
+            <returns>
+            Returns the status of the check (boolean).
+            </returns>
+        </member>
         <member name="M:RSSVE.Utilities.GetCelestialBodyList">
             <summary>
             Method to get the available celestial body names.
@@ -214,14 +347,6 @@
             Returns one the following operating system types: Linux, OSX, Windows or Unknown (string).
             </returns>
         </member>
-        <member name="P:RSSVE.Utilities.Is64BitOS">
-            <summary>
-            Method to get the operating system octet size.
-            </summary>
-            <returns>
-            Returns True if the Operating System is using the AMD64 specification (x64) and False if it is using the baseline Intel specification (x86).
-            </returns>
-        </member>
         <member name="P:RSSVE.Utilities.IsVerboseDebugEnabled">
             <summary>
             Method to check if the verbose debug option is active.
@@ -242,16 +367,6 @@
             <returns>
             Returns the assembly version (major.minor.revision.build) (string).
             </returns>
-        </member>
-        <member name="T:RSSVE.StartupChecker">
-            <summary>
-            Startup system checker. Operates only in the Loading scene.
-            </summary>
-        </member>
-        <member name="M:RSSVE.StartupChecker.Start">
-            <summary>
-            Method to start the startup checker.
-            </summary>
         </member>
     </members>
 </doc>
