@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016 - 2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -69,6 +69,13 @@ namespace RSSVE
                                 }
 
                                 //  Remove the invalid EVE config from the GameDatabase.
+                                //
+                                //  Note: this actually removes the offending ConfigNode
+                                //  **completely** from the GameDatabase (and so from the
+                                //  actual .cfg file).
+                                //
+                                //  Will need to find a better solution for this in the
+                                //  future but for now this will do the job just fine.
 
                                 EVENode.ClearNodes ();
                             }

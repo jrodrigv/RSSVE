@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016 - 2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -168,12 +168,12 @@ namespace RSSVE
                             // Skip the calculations if the body radius is less than 500 km (the near clip
                             // calculations do not return a correct value if the body radius is too small).
 
-                            if (!fTargetBodyRadius.Equals (null) && fTargetBodyRadius > 500000)
+                            if (!fTargetBodyRadius.Equals (null) && fTargetBodyRadius > 500000.0f)
                             {
                                 // Set the cutoff altitude to be high enough so that the normalized
                                 // near clip value will be small when near the body surface.
 
-                                float fCameraCutoffAlt = 100 * fTargetBodyRadius;
+                                float fCameraCutoffAlt = 100.0f * fTargetBodyRadius;
 
                                 // Calculate the distance between the body surface and the SS camera transforms.
                                 // Take into account the body radius, since the transform of a celestial body is

@@ -35,21 +35,28 @@ namespace RSSVE
         /// Parameter to set whether the EVE city lights should be visible.
         /// </summary>
 
-        [GameParameters.CustomParameterUI ("Enable City Lights")]
+        [GameParameters.CustomParameterUI ("Enable City Lights", toolTip = "Enables or disables the Earth city lights")]
         public bool EnableCityLights = true;
 
         /// <summary>
-        /// Parameter to set whether the Kopernicus PQS terrain textures should be visible.
+        /// Parameter to set whether the EVE cloud shadows should be visible.
         /// </summary>
 
-        [GameParameters.CustomParameterUI ("Enable Terrain Textures")]
+        [GameParameters.CustomParameterUI ("Enable Cloud Shadows", toolTip = "Enables or disables the cloud shadow effects")]
+        public bool EnableCloudShadows = true;
+
+        /// <summary>
+        /// Parameter to set whether the Kopernicus terrain textures should be visible.
+        /// </summary>
+
+        [GameParameters.CustomParameterUI ("Enable Terrain Textures", toolTip = "Enables or disables the detailed terrain")]
         public bool EnableTerrainTextures = true;
 
         /// <summary>
         /// Parameter to set whether the EVE volumetric clouds should be visible.
         /// </summary>
 
-        [GameParameters.CustomParameterUI ("Enable Volumetric Clouds")]
+        [GameParameters.CustomParameterUI ("Enable Volumetric Clouds", toolTip = "Enables or disables the volumetric cloud particles")]
         public bool EnableVolumetricClouds = true;
 
         /// <summary>
@@ -116,8 +123,9 @@ namespace RSSVE
 
                     if (RSSVESettings != null)
                     {
-                        RSSVESettings.TryGetValue ("EnableCityLights",       ref EnableCityLights);
-                        RSSVESettings.TryGetValue ("EnableTerrainTextures",  ref EnableTerrainTextures);
+                        RSSVESettings.TryGetValue ("EnableCityLights", ref EnableCityLights);
+                        RSSVESettings.TryGetValue ("EnableCloudShadows", ref EnableCloudShadows);
+                        RSSVESettings.TryGetValue ("EnableTerrainTextures", ref EnableTerrainTextures);
                         RSSVESettings.TryGetValue ("EnableVolumetricClouds", ref EnableVolumetricClouds);
                     }
 
@@ -130,6 +138,7 @@ namespace RSSVE
                 {
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("{0} config found (count: {1})!", szConfigNodeName, nConfigNodeCount));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("City lights enabled: {0}", EnableCityLights));
+                    Notification.Logger (Constants.AssemblyName, null, string.Format ("Cloud shadows enabled: {0}", EnableCloudShadows));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Terrain textures enabled: {0}", EnableTerrainTextures));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Volumetric clouds enabled: {0}", EnableVolumetricClouds));
                 }
@@ -183,8 +192,9 @@ namespace RSSVE
 
                 //  Save the user-defined RSSVE settings to the configuration file.
 
-                RSSVEDataNode.SetValue ("EnableCityLights",       EnableCityLights,       true);
-                RSSVEDataNode.SetValue ("EnableTerrainTextures",  EnableTerrainTextures,  true);
+                RSSVEDataNode.SetValue ("EnableCityLights", EnableCityLights, true);
+                RSSVEDataNode.SetValue ("EnableCloudShadows", EnableCloudShadows, true);
+                RSSVEDataNode.SetValue ("EnableTerrainTextures", EnableTerrainTextures, true);
                 RSSVEDataNode.SetValue ("EnableVolumetricClouds", EnableVolumetricClouds, true);
 
                 //  Save the configuration node settings.

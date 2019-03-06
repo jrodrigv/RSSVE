@@ -1,6 +1,6 @@
 //  ================================================================================
 /*
- * Copyright © 2014-2019, Majiir, ferram4.
+ * Copyright © 2014 - 2019, Majiir, ferram4.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -132,7 +132,7 @@ namespace RSSVE
                 {
                     try
                     {
-                        return !(bool) m.Invoke (null, new object[0]);
+                        return !(bool) m.Invoke (null, new object [0]);
                     }
                     catch (Exception e)
                     {
@@ -157,7 +157,7 @@ namespace RSSVE
 
                 if (incompatible.Length > 0)
                 {
-                    Debug.LogWarning ("[CompatibilityChecker]: Incompatible mods detected: " + string.Join(", ", incompatible));
+                    Debug.LogWarning ("[CompatibilityChecker]: Incompatible mods detected: " + string.Join (", ", incompatible));
 
                     message += string.Format ("\n\nThese mods are incompatible with KSP {0}.{1}.{2}:\n\n", Versioning.version_major, Versioning.version_minor, Versioning.Revision);
                     message += string.Join ("\n", incompatible);
@@ -174,7 +174,7 @@ namespace RSSVE
 
             if ((incompatible.Length > 0) || (incompatibleUnity.Length > 0))
             {
-                PopupDialog.SpawnPopupDialog (new Vector2 (0, 0), new Vector2 (0, 0), "CompatibilityChecker", "Incompatible Mods Detected", message, "OK", true, HighLogic.UISkin, true, string.Empty);
+                PopupDialog.SpawnPopupDialog (new Vector2 (0.0f, 0.0f), new Vector2 (0.0f, 0.0f), "CompatibilityChecker", "Incompatible Mods Detected", message, "OK", true, HighLogic.UISkin, true, string.Empty);
             }
         }
 

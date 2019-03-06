@@ -1,7 +1,7 @@
 //  ================================================================================
 //  Real Solar System Visual Enhancements for Kerbal Space Program.
 //
-//  Copyright © 2016-2019, Alexander "Phineas Freak" Kampolis.
+//  Copyright © 2016 - 2019, Alexander "Phineas Freak" Kampolis.
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
@@ -55,12 +55,9 @@ namespace RSSVE
         {
             try
             {
-                if (CompatibilityChecker.IsCompatible ())
-                {
-                    Notification.Logger (Constants.AssemblyName, null, "Removing the EVE config GameDatabase event handler...");
+                Notification.Logger (Constants.AssemblyName, null, "Removing the EVE config GameDatabase event handler...");
 
-                    GameEvents.OnGameDatabaseLoaded.Remove (OnGameDatabaseLoaded);
-                }
+                GameEvents.OnGameDatabaseLoaded.Remove (OnGameDatabaseLoaded);
             }
             catch (Exception ExceptionStack)
             {
@@ -122,8 +119,8 @@ namespace RSSVE
                     //  • Module Manager
                     //  • Real Solar System
 
-                    bool AssemblyEVELoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("EVEManager",      StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyEVEPath));
-                    bool AssemblyMMLoaded  = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("ModuleManager",   StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyMMPath));
+                    bool AssemblyEVELoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("EVEManager", StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyEVEPath));
+                    bool AssemblyMMLoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("ModuleManager", StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyMMPath));
                     bool AssemblyRSSLoaded = AssemblyLoader.loadedAssemblies.Any (asm => asm.assembly.GetName ().Name.StartsWith ("RealSolarSystem", StringComparison.InvariantCultureIgnoreCase) && asm.url.ToLower ().Equals (Constants.AssemblyRSSPath));
 
                     //  If a dependency is not installed then we add it in the missing dependencies list.
@@ -160,16 +157,13 @@ namespace RSSVE
 
                     //  Validate all possible EVE configuration files loaded in the GameDatabase.
 
-                    if (CompatibilityChecker.IsCompatible ())
-                    {
-                        Notification.Logger (Constants.AssemblyName, null, "Starting the EVE config validation...");
+                    Notification.Logger (Constants.AssemblyName, null, "Initiating the EVE config validation...");
 
-                        EVEConfigChecker.GetValidateConfig (Utilities.GetCelestialBodyList ());
+                    EVEConfigChecker.GetValidateConfig (Utilities.GetCelestialBodyList ());
 
-                        Notification.Logger (Constants.AssemblyName, null, "Adding the EVE config GameDatabase event handler...");
+                    Notification.Logger (Constants.AssemblyName, null, "Adding the EVE config GameDatabase event handler...");
 
-                        GameEvents.OnGameDatabaseLoaded.Add (OnGameDatabaseLoaded);
-                    }
+                    GameEvents.OnGameDatabaseLoaded.Add (OnGameDatabaseLoaded);
                 }
             }
             catch (Exception ExceptionStack)
