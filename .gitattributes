@@ -17,8 +17,8 @@
 *.MD        text    eol=lf
 *.scprof    text    eol=lf
 *.SCPROF    text    eol=lf
-*.sln       text    eol=lf
-*.SLN       text    eol=lf
+*.sln       text    eol=crlf
+*.SLN       text    eol=crlf
 *.txt       text    eol=lf
 *.TXT       text    eol=lf
 *.xml       text    eol=lf
