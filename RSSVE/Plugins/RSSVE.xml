@@ -4,57 +4,6 @@
         <name>RSSVE</name>
     </assembly>
     <members>
-        <member name="T:RSSVE.CameraUpdater">
-            <summary>
-            ScaledSpace camera updater class. Operates only in the Flight scene.
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.fCameraNearClipLow">
-            <summary>
-            The ScaledSpace camera near clip minimum value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.fCameraNearClipHigh">
-            <summary>
-            The ScaledSpace camera near clip maximum value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.SSCamera">
-            <summary>
-            The ScaledSpace camera object.
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.fDefaultNearClip">
-            <summary>
-            The ScaledSpace camera default near clip value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.fTargetBodyRadius">
-            <summary>
-            The target body radius (in meters).
-            </summary>
-        </member>
-        <member name="F:RSSVE.CameraUpdater.TargetBodyTransform">
-            <summary>
-            The target body transform.
-            </summary>
-        </member>
-        <member name="M:RSSVE.CameraUpdater.Start">
-            <summary>
-            Method to start the ScaledSpace camera patcher.
-            </summary>
-            <returns>
-            Does not return a value.
-            </returns>
-        </member>
-        <member name="M:RSSVE.CameraUpdater.Update">
-            <summary>
-            Method to update the ScaledSpace camera near clip value.
-            </summary>
-            <returns>
-            Does not return a value.
-            </returns>
-        </member>
         <member name="T:RSSVE.EVEConfigChecker">
             <summary>
             Environmental Visual Enhancements configuration file integrity checker class.
@@ -123,9 +72,14 @@
             Parameter to set whether the EVE city lights should be visible.
             </summary>
         </member>
+        <member name="F:RSSVE.RSSVESettings.EnableCloudShadows">
+            <summary>
+            Parameter to set whether the EVE cloud shadows should be visible.
+            </summary>
+        </member>
         <member name="F:RSSVE.RSSVESettings.EnableTerrainTextures">
             <summary>
-            Parameter to set whether the Kopernicus PQS terrain textures should be visible.
+            Parameter to set whether the Kopernicus terrain textures should be visible.
             </summary>
         </member>
         <member name="F:RSSVE.RSSVESettings.EnableVolumetricClouds">
