@@ -42,9 +42,9 @@ using System.Runtime.InteropServices;
 //    • Build Number
 //    • Revision
 
-[assembly: AssemblyVersion ("1.6.1.2401")]
-[assembly: AssemblyFileVersion ("1.6.1.1")]
-[assembly: AssemblyInformationalVersion ("1.6.1.2401")]
+[assembly: AssemblyVersion ("1.4.5.2243")]
+[assembly: AssemblyFileVersion ("1.4.5.1")]
+[assembly: AssemblyInformationalVersion ("1.4.5.2243")]
 
 //  The KSPAssembly attribute can be used to ensure that the plugin assemblies
 //  are loaded in the correct order.

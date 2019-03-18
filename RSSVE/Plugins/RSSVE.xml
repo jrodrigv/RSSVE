@@ -77,11 +77,6 @@
             Parameter to set whether the EVE cloud shadows should be visible.
             </summary>
         </member>
-        <member name="F:RSSVE.RSSVESettings.EnableTerrainTextures">
-            <summary>
-            Parameter to set whether the Kopernicus terrain textures should be visible.
-            </summary>
-        </member>
         <member name="F:RSSVE.RSSVESettings.EnableVolumetricClouds">
             <summary>
             Parameter to set whether the EVE volumetric clouds should be visible.
@@ -225,11 +220,6 @@
         <member name="F:RSSVE.Constants.VersionCompatible.RevisionMax">
             <summary>
             The maximum revision version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.Build">
-            <summary>
-            The build version value.
             </summary>
         </member>
         <member name="T:RSSVE.Notification">

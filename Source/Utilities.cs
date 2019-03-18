@@ -75,12 +75,6 @@ namespace RSSVE
                 /// </summary>
 
                 public static readonly int RevisionMax = 9;
-
-                /// <summary>
-                /// The build version value.
-                /// </summary>
-
-                public static readonly int Build = 2401;
             }
 
             /// <summary>
