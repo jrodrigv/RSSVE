@@ -1,7 +1,5 @@
 # RSSVE
 
-![][RSSVE:Banner]
-
 ![][RSSVE:shield-version]
 ![][RSSVE:shield-license]
 
@@ -46,28 +44,6 @@ You should have received a copy of the license along with this work. If not, vis
 
 ***
 
-![][RSSVE:Venus]
-
-![][RSSVE:Earth]
-
-![][RSSVE:Mars]
-
-![][RSSVE:Jupiter]
-
-![][RSSVE:Saturn]
-
-![][RSSVE:Titan]
-
-![][RSSVE:Uranus]
-
-![][RSSVE:Neptune]
-
-![][RSSVE:Triton]
-
-![][RSSVE:Pluto]
-
-***
-
 [RSSVE:cc-license-link]:      https://creativecommons.org/licenses/by-nc-sa/4.0
 [RSSVE:CICLOPS-link]:         http://www.ciclops.org
 [RSSVE:contributor-francois]: https://github.com/francoiswnel
@@ -85,15 +61,3 @@ You should have received a copy of the license along with this work. If not, vis
 [RSSVE:shield-version]:       https://img.shields.io/badge/KSP%20Version-1.3.1.1891-red.svg
 [RSSVE:TCM-link]:             http://www.celestiamotherlode.net
 [RSSVE:wiki-link]:            https://github.com/PhineasFreak/RSSVE/wiki
-
-[RSSVE:Banner]:  https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_banner.png
-[RSSVE:Earth]:   https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_earth.png
-[RSSVE:Jupiter]: https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_jupiter.png
-[RSSVE:Mars]:    https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_mars.png
-[RSSVE:Neptune]: https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_neptune.png
-[RSSVE:Pluto]:   https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_pluto.png
-[RSSVE:Saturn]:  https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_saturn.png
-[RSSVE:Titan]:   https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_titan.png
-[RSSVE:Triton]:  https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_triton.png
-[RSSVE:Uranus]:  https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_uranus.png
-[RSSVE:Venus]:   https://github.com/PhineasFreak/PicBin/blob/master/PicBin/RSSVE_git/RSSVE_thumbnail_venus.png
