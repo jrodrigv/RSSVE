@@ -1,4 +1,33 @@
 ==================================================
+RSSVE v1.4.5-RC1 for KSP 1.4.5 (2019-03-19)
+==================================================
+
+Change Log:
+
+    • Compatibility update for the KSP 1.4.5 and Scatterer v0.0540 releases.
+    • Scatterer is now considered as a suggested mod and not a hard dependency.
+    • Added a new UI option for toggling the EVE cloud shadows.
+    • Added Community Terrain Textures Pack (CTTP) support for select bodies (Venus, Earth, Mars, Titan, Triton & Pluto).
+    • Converted all single layered cubemaps to use the green channel to minimize compression artifacts (courtesy of Poodmund).
+    • Updated the version checker to support all possible KSP versions from 1.4.0 through 1.6.9.
+    • Removed the redundant high resolution Earth city lights texture map.
+    • Removed the Uranus cloud maps.
+    • Disabled the high altitude Earth cloud layer to improve performance and the overall visual accuracy.
+
+Bug Fixes:
+
+    • Fixed the transitions between PQS and ScaledSpace for most of the bodies.
+    • Fixed the orientation of the Earth clouds.
+    • Fixed the Earth city lights texture map missing its northern portion.
+    • Fixed the Earth city lights sometimes appearing blocky from low orbital altitudes.
+    • Fixed some seams appearing in the Earth cloud detail texture.
+
+Known Issues:
+
+    • The cloud texture maps may break upon reloading a save while in-flight.
+    • The Earth city lights may sometimes appear as black patches from orbit.
+
+==================================================
 RSSVE v1.3.1-6 for KSP 1.3.1 (2018-12-23)
 ==================================================
 
@@ -74,7 +103,7 @@ Bug Fixes:
 Known Issues:
 
     • The city lights may appear blocky from low orbital altitudes.
-    • The transition between PQS and ScaledSpace is not as soft as it should.
+    • The transitioning between PQS and ScaledSpace is not as soft as it should.
     • The cloud texture maps may break upon reloading a save while in-flight.
     • The Saturn rings may sometimes appear to cast hard shadows or be completely black.
 
@@ -89,7 +118,7 @@ Bug Fixes:
 Known Issues:
 
     • The city lights may appear blocky from low orbital altitudes.
-    • The transition between PQS and ScaledSpace is not as soft as it should.
+    • The transitioning between PQS and ScaledSpace is not as soft as it should.
     • The cloud texture maps may break upon reloading a save while in-flight.
     • The Saturn rings may sometimes appear to cast hard shadows or be completely black.
 
@@ -106,7 +135,7 @@ Change Log:
 Known Issues:
 
     • The city lights may appear blocky from low orbital altitudes.
-    • The transition between PQS and ScaledSpace is not as soft as it should.
+    • The transitioning between PQS and ScaledSpace is not as soft as it should.
     • The cloud texture maps may break upon reloading a save while in-flight.
     • The Saturn rings may sometimes appear to cast hard shadows or be completely black.
 
@@ -135,7 +164,7 @@ Bug Fixes:
 Known Issues:
 
     • The city lights may appear blocky from low orbital altitudes.
-    • The transition between PQS and ScaledSpace is not as soft as it should.
+    • The transitioning between PQS and ScaledSpace is not as soft as it should.
     • The cloud texture maps may break upon reloading a save while in-flight.
     • The Saturn rings may sometimes appear to cast hard shadows or be completely black.
 
@@ -170,7 +199,7 @@ Bug Fixes:
 Known Issues:
 
     • The city lights may appear blocky from low orbital altitudes.
-    • The transition between PQS and ScaledSpace is not as soft as it should.
+    • The transitioning between PQS and ScaledSpace is not as soft as it should.
     • The cloud texture maps may break upon reloading a save while in-flight.
     • The Saturn ring may appear to cast hard shadows.
     • Some of the bodies may appear as featureless spheres under DirectX 11 or OpenGL. Affected users can enable the Scatterer PlanetFix patch.
