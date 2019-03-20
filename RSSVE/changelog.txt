@@ -12,7 +12,7 @@ Change Log:
     • Updated the version checker to support all possible KSP versions from 1.4.0 through 1.6.9.
     • Removed the redundant high resolution Earth city lights texture map.
     • Removed the Uranus cloud maps.
-    • Disabled the high altitude Earth cloud layer to improve performance and the overall visual accuracy.
+    • Removed the high altitude Earth cloud layer to improve performance and the overall visual accuracy.
 
 Bug Fixes:
 
