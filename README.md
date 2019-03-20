@@ -33,6 +33,7 @@ Check the **![RSSVE wiki][RSSVE:wiki-link]** about the requirements and the inst
   * **Damien**
   * **[Francois W. Nel][RSSVE:contributor-francois]**
   * **[Lukas "Theysen" Theisen][RSSVE:contributor-theysen]**
+  * **Poodmund**
 
 ## License
 
@@ -58,6 +59,6 @@ You should have received a copy of the license along with this work. If not, vis
 [RSSVE:RVE-link]:             https://github.com/Pingopete
 [RSSVE:Scatterer-link]:       https://github.com/LGhassen
 [RSSVE:shield-license]:       https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-green.svg
-[RSSVE:shield-version]:       https://img.shields.io/badge/KSP%20Version-1.3.1.1891-red.svg
+[RSSVE:shield-version]:       https://img.shields.io/badge/KSP%20Version-1.4.5.2243-red.svg
 [RSSVE:TCM-link]:             http://www.celestiamotherlode.net
 [RSSVE:wiki-link]:            https://github.com/PhineasFreak/RSSVE/wiki
