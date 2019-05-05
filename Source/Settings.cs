@@ -5,11 +5,11 @@
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
-//  Real Solar System Visual Enhancements is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-//  (CC-BY-NC-SA 4.0) license.
+//  Real Solar System Visual Enhancements is licensed under a Creative Commons
+//  Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) license.
 //
-//  You should have received a copy of the license along with this work. If not, visit the official
-//  Creative Commons web page:
+//  You should have received a copy of the license along with this work. If not,
+//  visit the official Creative Commons web page:
 //
 //      • https://www.creativecommons.org/licensies/by-nc-sa/4.0
 //  ================================================================================

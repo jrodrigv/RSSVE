@@ -5,11 +5,11 @@
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
-//  Real Solar System Visual Enhancements is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-//  (CC-BY-NC-SA 4.0) license.
+//  Real Solar System Visual Enhancements is licensed under a Creative Commons
+//  Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) license.
 //
-//  You should have received a copy of the license along with this work. If not, visit the official
-//  Creative Commons web page:
+//  You should have received a copy of the license along with this work. If not,
+//  visit the official Creative Commons web page:
 //
 //      • https://www.creativecommons.org/licensies/by-nc-sa/4.0
 //  ================================================================================
@@ -38,9 +38,9 @@ namespace RSSVE
             {
                 //  Log some basic information that might be of interest when debugging installations.
 
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly location: {0}", Assembly.GetExecutingAssembly().Location));
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly version: {0}", Version.GetAssemblyVersion()));
-                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly compatible: {0}", CompatibilityChecker.IsCompatible()));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly location: {0}", Assembly.GetExecutingAssembly ().Location));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly version: {0}", Version.GetAssemblyVersion ()));
+                Notification.Logger (Constants.AssemblyName, null, string.Format ("Assembly compatible: {0}", CompatibilityChecker.IsCompatible ()));
 
                 //  The following information fields are only active if the
                 //  "Verbose Logging" option in the KSP settings is enabled.

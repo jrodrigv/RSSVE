@@ -5,11 +5,11 @@
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
-//  Real Solar System Visual Enhancements is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-//  (CC-BY-NC-SA 4.0) license.
+//  Real Solar System Visual Enhancements is licensed under a Creative Commons
+//  Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) license.
 //
-//  You should have received a copy of the license along with this work. If not, visit the official
-//  Creative Commons web page:
+//  You should have received a copy of the license along with this work. If not,
+//  visit the official Creative Commons web page:
 //
 //      • https://www.creativecommons.org/licensies/by-nc-sa/4.0
 //  ================================================================================
@@ -34,26 +34,28 @@ namespace RSSVE
         /// Returns the number of the specific EVE configuration files found.
         /// </returns>
 
-        public static int GetCheckConfig (List<string>szBodyLoaderNames, string szEVENodeToCheck)
+        public static int GetCheckConfig (List<string> szBodyLoaderNames, string szEVENodeToCheck)
         {
-            //  Check if other EVE configs are present in the GameDatabase.
-            //  Configs that refer to non-existent bodies WILL break the EVE config loader.
+            //  Check if other EVE configuration files are present in the GameDatabase.
+            //
+            //  Configuration files that refer to non-existent bodies do (and WILL) break
+            //  the EVE loader.
 
             int nEVENodeCount = 0;
 
             if (!string.IsNullOrEmpty (szEVENodeToCheck))
             {
-                //  Scan the GameDatabase for all loaded EVE configs.
+                //  Scan the GameDatabase for all loaded EVE configuration files.
 
                 foreach (ConfigNode EVENode in GameDatabase.Instance.GetConfigNodes (szEVENodeToCheck))
                 {
-                    //  Search for the EVE body sub-ConfigNodes.
+                    //  Search for all available EVE body objects.
 
                     foreach (ConfigNode EVECloudsObject in EVENode.GetNodes ("OBJECT"))
                     {
                         if (EVENode != null && EVECloudsObject.HasValue ("body"))
                         {
-                            // Get the raw body name from the sub-config.
+                            // Get the raw body name from the body object.
 
                             string szBodyName = EVECloudsObject.GetValue ("body");
 
@@ -68,7 +70,8 @@ namespace RSSVE
                                     Notification.Logger (Constants.AssemblyName, "Warning", string.Format ("Incompatible {0} body detected (name: {1})!", szEVENodeToCheck, szBodyName));
                                 }
 
-                                //  Remove the invalid EVE config from the GameDatabase.
+                                //  Remove the invalid EVE configuration file from the
+                                //  GameDatabase.
                                 //
                                 //  Note: this actually removes the offending ConfigNode
                                 //  **completely** from the GameDatabase (and so from the
@@ -82,13 +85,13 @@ namespace RSSVE
                         }
                     }
 
-                    //  Increment the EVE config counter.
+                    //  Increment the EVE node counter.
 
                     nEVENodeCount++;
                 }
             }
 
-            //  Return the number of EVE configs found (default: zero).
+            //  Return the number of EVE configuration files found (default: zero).
 
             return nEVENodeCount;
         }
@@ -101,9 +104,9 @@ namespace RSSVE
         /// Does not return a value.
         /// </returns>
 
-        public static void GetValidateConfig (List<string>szBodyLoaderNames)
+        public static void GetValidateConfig (List<string> szBodyLoaderNames)
         {
-            string [] szEVEConfigToCheck = {"EVE_ATMOSPHERE", "EVE_CITY_LIGHTS", "EVE_CLOUDS", "EVE_SHADOWS", "EVE_TERRAIN", "PQS_MANAGER"};
+            string [] szEVEConfigToCheck = { "EVE_ATMOSPHERE", "EVE_CITY_LIGHTS", "EVE_CLOUDS", "EVE_SHADOWS", "EVE_TERRAIN", "PQS_MANAGER" };
 
             foreach (string szEVENodeToCheck in szEVEConfigToCheck)
             {
@@ -111,23 +114,23 @@ namespace RSSVE
 
                 if (szBodyLoaderNames.Count > 0)
                 {
-                    //  Try to validate each one of the EVE config types.
+                    //  Try to validate each one of the EVE objects.
 
                     int nEVENodesFound = GetCheckConfig (szBodyLoaderNames, szEVENodeToCheck);
 
-                    //  Make a note if no EVE configs of that type have been installed.
+                    //  Make a note if no EVE configuration files of that type have been installed.
 
                     if (nEVENodesFound == 0)
                     {
-                        Notification.Logger (Constants.AssemblyName, "Warning", string.Format ("No {0} configs found!", szEVENodeToCheck));
+                        Notification.Logger (Constants.AssemblyName, "Warning", string.Format ("No {0} configuration files found!", szEVENodeToCheck));
                     }
                     else
                     {
-                        //  Print the total number of EVE configs loaded (for debug purposes).
+                        //  Print the total number of EVE configuration files loaded (for debug purposes).
 
                         if (Utilities.IsVerboseDebugEnabled)
                         {
-                            Notification.Logger (Constants.AssemblyName, null, string.Format ("{0} config found (count: {1})!", szEVENodeToCheck, nEVENodesFound));
+                            Notification.Logger (Constants.AssemblyName, null, string.Format ("{0} configuration file found (count: {1})!", szEVENodeToCheck, nEVENodesFound));
                         }
                     }
                 }

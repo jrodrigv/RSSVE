@@ -5,11 +5,11 @@
 //
 //  This file is part of Real Solar System Visual Enhancements.
 //
-//  Real Solar System Visual Enhancements is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-//  (CC-BY-NC-SA 4.0) license.
+//  Real Solar System Visual Enhancements is licensed under a Creative Commons
+//  Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) license.
 //
-//  You should have received a copy of the license along with this work. If not, visit the official
-//  Creative Commons web page:
+//  You should have received a copy of the license along with this work. If not,
+//  visit the official Creative Commons web page:
 //
 //      • https://www.creativecommons.org/licensies/by-nc-sa/4.0
 //
@@ -17,7 +17,7 @@
 //
 //      • https://github.com/Majiir/Kethane/blob/master/Plugin/Kethane/Utilities/InstallChecker.cs
 //
-//  Original is © Copyright Majiir, CC0 Public Domain:
+//  Original copyright by Majiir, CC0 Public Domain:
 //
 //      • http://creativecommons.org/publicdomain/zero/1.0
 //
@@ -55,7 +55,7 @@ namespace RSSVE
         {
             try
             {
-                Notification.Logger (Constants.AssemblyName, null, "Removing the EVE config GameDatabase event handler...");
+                Notification.Logger (Constants.AssemblyName, null, "Removing the EVE configuration event handler...");
 
                 GameEvents.OnGameDatabaseLoaded.Remove (OnGameDatabaseLoaded);
             }
@@ -157,11 +157,11 @@ namespace RSSVE
 
                     //  Validate all possible EVE configuration files loaded in the GameDatabase.
 
-                    Notification.Logger (Constants.AssemblyName, null, "Initiating the EVE config validation...");
+                    Notification.Logger (Constants.AssemblyName, null, "Initiating the EVE configuration validation...");
 
                     EVEConfigChecker.GetValidateConfig (Utilities.GetCelestialBodyList ());
 
-                    Notification.Logger (Constants.AssemblyName, null, "Adding the EVE config GameDatabase event handler...");
+                    Notification.Logger (Constants.AssemblyName, null, "Adding the EVE configuration event handler...");
 
                     GameEvents.OnGameDatabaseLoaded.Add (OnGameDatabaseLoaded);
                 }

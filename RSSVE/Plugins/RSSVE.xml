@@ -87,18 +87,6 @@
             Display a notification to the user that a restart is required after changing any of the parameters.
             </summary>
         </member>
-        <member name="M:RSSVE.RSSVESettings.OnLoad(ConfigNode)">
-            <summary>
-            Method to load the configuration options.
-            </summary>
-            <param name = "node">The ConfigNode object to be loaded.</param>
-        </member>
-        <member name="M:RSSVE.RSSVESettings.OnSave(ConfigNode)">
-            <summary>
-            Method to save the configuration options.
-            </summary>
-            <param name = "node">The ConfigNode object to be saved.</param>
-        </member>
         <member name="P:RSSVE.RSSVESettings.DisplaySection">
             <summary>
             Method to set the localized title of the Difficulty Options entry.
@@ -113,6 +101,18 @@
             <summary>
             Method to set the presets of the mod Difficulty Options.
             </summary>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnLoad(ConfigNode)">
+            <summary>
+            Method to load the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be loaded.</param>
+        </member>
+        <member name="M:RSSVE.RSSVESettings.OnSave(ConfigNode)">
+            <summary>
+            Method to save the configuration options.
+            </summary>
+            <param name = "node">The ConfigNode object to be saved.</param>
         </member>
         <member name="P:RSSVE.RSSVESettings.Section">
             <summary>
@@ -146,6 +146,41 @@
             <returns>
             Does not return a value.
             </returns>
+        </member>
+        <member name="T:RSSVE.Constants.VersionCompatible">
+            <summary>
+            Version check structure.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.MajorMin">
+            <summary>
+            The minimum major version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.MajorMax">
+            <summary>
+            The maximum major version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.MinorMin">
+            <summary>
+            The minimum minor version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.MinorMax">
+            <summary>
+            The maximum minor version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMin">
+            <summary>
+            The minimum revision version value.
+            </summary>
+        </member>
+        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMax">
+            <summary>
+            The maximum revision version value.
+            </summary>
         </member>
         <member name="F:RSSVE.Constants.UnityVersion">
             <summary>
@@ -185,41 +220,6 @@
         <member name="F:RSSVE.Constants.ConfigurationFilePath">
             <summary>
             The (relative to the "GameData" directory) path where the configuration file resides.
-            </summary>
-        </member>
-        <member name="T:RSSVE.Constants.VersionCompatible">
-            <summary>
-            Version check structure.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.MajorMin">
-            <summary>
-            The minimum major version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.MajorMax">
-            <summary>
-            The maximum major version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.MinorMin">
-            <summary>
-            The minimum minor version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.MinorMax">
-            <summary>
-            The maximum minor version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMin">
-            <summary>
-            The minimum revision version value.
-            </summary>
-        </member>
-        <member name="F:RSSVE.Constants.VersionCompatible.RevisionMax">
-            <summary>
-            The maximum revision version value.
             </summary>
         </member>
         <member name="T:RSSVE.Notification">
