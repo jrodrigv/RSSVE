@@ -1,4 +1,31 @@
 ==================================================
+RSSVE v1.6.1-RC1 for KSP 1.6.1 (2019-05-06)
+==================================================
+
+Change Log:
+
+    • Added a version file.
+    • Increased the amount of the Venus and Titan surface haze.
+    • Tweaked the Rayleigh scattering colors of all bodies.
+    • Tweaked the colors of the Saturn clouds.
+
+Bug Fixes:
+
+    • Fixed some EVE cloud integration issues introduced with the v0.0540 Scatterer release.
+    • Fixed some CTTP terrain tiling issues.
+    • Fixed the dark banding appearing over the atmosphere rim of some bodies.
+    • Fixed the green line artifact appearing on the Earth's horizon as seen from the surface.
+    • Fixed the Mie scattering colors of all bodies.
+    • Fixed the incorrect Saturn cloud layer cubemap indexes.
+    • Fixed the colors of the Titan oceans.
+
+Known Issues:
+
+    • The cloud texture maps may break upon reloading a save while in-flight.
+    • The Earth city lights may sometimes appear as black patches from orbit.
+    • The Sun corona may have a black outline appear in some cases.
+
+==================================================
 RSSVE v1.4.5-RC1 for KSP 1.4.5 (2019-03-19)
 ==================================================
 
