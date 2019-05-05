@@ -28,8 +28,8 @@
 # Source code
 # ==================================================
 
-*.cs        text    eol=lf  diff=csharp
-*.CS        text    eol=lf  diff=csharp
+*.cs        text    eol=lf      diff=csharp
+*.CS        text    eol=lf      diff=csharp
 
 # ==================================================
 # Images & textures
@@ -55,10 +55,5 @@
 # Ignore list
 # ==================================================
 
-Builds         export-ignore
-Profiles       export-ignore
-
 .gitattributes export-ignore
 .gitignore     export-ignore
-*.md           export-ignore
-*.MD           export-ignore
