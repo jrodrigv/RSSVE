@@ -55,5 +55,11 @@
 # Ignore list
 # ==================================================
 
-.gitattributes export-ignore
-.gitignore     export-ignore
+.gitattributes  export-ignore
+.gitignore      export-ignore
+LICENSE.md      export-ignore
+README.md       export-ignore
+Builds          export-ignore
+Profiles        export-ignore
+RSSVE           export-ignore
+Source          export-ignore
