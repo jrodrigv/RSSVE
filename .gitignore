@@ -19,3 +19,6 @@ Source/Builds/*
 *.PNG
 *.raw
 *.RAW
+/_ReSharper.Caches/ReSharperPlatformVs16191_4011600b.00
+/.vs
+/Source/_ReSharper.Caches/ReSharperPlatformVs16191_4011600b.RSSVE.00

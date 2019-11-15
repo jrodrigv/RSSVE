@@ -50,13 +50,12 @@ namespace RSSVE
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using Unity player: {0}", Utilities.GetPlatformType));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using renderer: {0}", Utilities.GetGraphicsRenderer));
                     Notification.Logger (Constants.AssemblyName, null, string.Format ("Using Maximum Texture Size: {0}", SystemInfo.maxTextureSize));
-                    Notification.Logger (Constants.AssemblyName, null, string.Format ("Supports cubemap textures: {0}", SystemInfo.supportsRenderToCubemap));
                 }
 
                 //  Check if the graphics accelerator installed supports at
                 //  least the 8K texture size required by the RSSVE assets.
 
-                if (SystemInfo.maxTextureSize < 8192 && !SystemInfo.supportsRenderToCubemap)
+                if (SystemInfo.maxTextureSize < 8192)
                 {
                     Notification.Dialog ("TextureChecker", "Unsupported Graphics Accelerator", "#F0F0F0", string.Format ("{0} is not supported by the current graphics accelerator installed.", Constants.AssemblyName), "#F0F0F0");
 

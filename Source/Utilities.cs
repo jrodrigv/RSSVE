@@ -56,13 +56,13 @@ namespace RSSVE
             /// The minimum minor version value.
             /// </summary>
 
-            public static readonly int MinorMin = 4;
+            public static readonly int MinorMin = 8;
 
             /// <summary>
             /// The maximum minor version value.
             /// </summary>
 
-            public static readonly int MinorMax = 6;
+            public static readonly int MinorMax = 8;
 
             /// <summary>
             /// The minimum revision version value.
@@ -81,7 +81,7 @@ namespace RSSVE
         /// The compatible Unity version.
         /// </summary>
 
-        public static readonly string UnityVersion = "2017.1.3p1";
+        public static readonly string UnityVersion = "2019.2.2f1";
 
         /// <summary>
         /// The name of the assembly (used as a tag for the notification dialogs and the log file).
